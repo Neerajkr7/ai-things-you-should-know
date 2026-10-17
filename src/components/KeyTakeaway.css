@@ -1,0 +1,33 @@
+.key-takeaway {
+  padding: var(--space-5);
+  background: var(--color-accent-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-7);
+}
+
+.key-takeaway-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.key-takeaway-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.key-takeaway-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.key-takeaway-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  font-style: italic;
+}

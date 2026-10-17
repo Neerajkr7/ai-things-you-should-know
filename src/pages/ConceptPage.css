@@ -1,0 +1,269 @@
+/* ============================================
+   Concept Detail Page Styles
+   ============================================ */
+
+.concept-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Header ---- */
+.concept-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(16, 20, 24, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.concept-header-inner {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: var(--color-surface-secondary);
+  color: var(--color-text-primary);
+  border-color: var(--color-text-muted);
+}
+
+.concept-header-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+/* ---- Progress ---- */
+.concept-progress {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.concept-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--color-surface-elevated);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.concept-progress-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 2px;
+  transition: width var(--transition-normal);
+}
+
+.concept-progress-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Main ---- */
+.concept-main {
+  flex: 1;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--space-6) var(--space-4) var(--space-10);
+}
+
+/* ---- Article ---- */
+.concept-article {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.concept-meta {
+  margin-bottom: var(--space-3);
+}
+
+.concept-category {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.concept-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-6);
+  color: var(--color-text-primary);
+}
+
+/* ---- Definition ---- */
+.concept-definition {
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+
+.concept-definition-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+}
+
+/* ---- Section ---- */
+.concept-section {
+  margin-bottom: var(--space-7);
+}
+
+.concept-body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+}
+
+/* ---- Not Found ---- */
+.concept-not-found {
+  text-align: center;
+  padding: var(--space-10) var(--space-4);
+}
+
+.concept-not-found h1 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-3);
+}
+
+.concept-not-found p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.concept-not-found-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-accent-surface);
+  color: var(--color-accent);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: background var(--transition-fast);
+}
+
+.concept-not-found-link:hover {
+  background: var(--color-surface-elevated);
+  color: var(--color-accent-hover);
+}
+
+/* ---- Navigation (Prev/Next) ---- */
+.concept-nav {
+  max-width: var(--content-max-width);
+  margin: var(--space-8) auto 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.concept-nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.concept-nav-link:hover {
+  background: var(--color-surface-secondary);
+  border-color: var(--color-accent);
+  color: var(--color-text-secondary);
+}
+
+.concept-nav-next {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.concept-nav-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.concept-nav-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.concept-nav-title {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- Responsive ---- */
+@media (min-width: 768px) {
+  .concept-main {
+    padding: var(--space-8) var(--space-6) var(--space-10);
+  }
+
+  .concept-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .concept-header-inner {
+    padding: var(--space-4) var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .concept-main {
+    padding: var(--space-9) var(--space-7) var(--space-10);
+  }
+}
+
+/* Mobile: stack nav vertically on very small screens */
+@media (max-width: 480px) {
+  .concept-nav {
+    grid-template-columns: 1fr;
+  }
+}

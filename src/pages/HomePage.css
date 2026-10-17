@@ -1,0 +1,301 @@
+/* ============================================
+   Home Page Styles
+   ============================================ */
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Header ---- */
+.home-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(16, 20, 24, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.home-header-inner {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.home-logo-accent {
+  color: var(--color-accent);
+}
+
+/* ---- Main ---- */
+.home-main {
+  flex: 1;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--space-6) var(--space-4) var(--space-10);
+}
+
+/* ---- Hero ---- */
+.home-hero {
+  margin-bottom: var(--space-6);
+}
+
+.home-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-primary);
+}
+
+.home-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+  max-width: 480px;
+}
+
+/* ---- Search ---- */
+.search-wrapper {
+  position: relative;
+  margin-bottom: var(--space-6);
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--space-8) 0 var(--space-8);
+  padding-left: 40px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast);
+}
+
+.search-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.search-clear {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--color-surface-secondary);
+  border: none;
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.search-clear:hover {
+  background: var(--color-surface-elevated);
+}
+
+.search-status {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* ---- Empty State ---- */
+.empty-state {
+  text-align: center;
+  padding: var(--space-10) var(--space-4);
+}
+
+.empty-state-text {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-2);
+}
+
+.empty-state-hint {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* ---- Category Sections ---- */
+.category-section {
+  margin-bottom: var(--space-7);
+}
+
+.category-title {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+  padding-left: var(--space-1);
+}
+
+/* ---- Concept Cards ---- */
+.concept-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.concept-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.concept-card:hover {
+  background: var(--color-surface-secondary);
+  border-color: var(--color-accent);
+  color: inherit;
+}
+
+.concept-card-number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-accent-surface);
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.concept-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.concept-card-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  line-height: var(--line-height-support);
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.concept-card-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-support);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.concept-card-meta {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.concept-card-time {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.concept-card-arrow {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.concept-card:hover .concept-card-arrow {
+  color: var(--color-accent);
+  transform: translateX(2px);
+}
+
+/* ---- Footer ---- */
+.home-footer {
+  margin-top: var(--space-9);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.home-footer p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* ---- Responsive ---- */
+@media (min-width: 768px) {
+  .home-main {
+    padding: var(--space-8) var(--space-6) var(--space-10);
+  }
+
+  .home-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .home-subtitle {
+    font-size: var(--font-size-md);
+  }
+
+  .home-header-inner {
+    padding: var(--space-4) var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-main {
+    padding: var(--space-9) var(--space-7) var(--space-10);
+  }
+
+  .home-title {
+    font-size: 32px;
+  }
+}
